@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build C++ Project",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "week1/*.cpp", // Compile all C++ files in the folder
+        "-o", // Output flag
+        "week1/main.exe" // Name of the output executable
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "options": {
+        "shell": {
+          "executable": "cmd.exe",
+          "args": ["/c"]
+        }
+      },
+      "detail": "Compiles all C++ source files into main.exe."
+    },
+    {
+      "label": "Run C++ Project",
+      "type": "shell",
+      "command": "week1/main.exe",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "detail": "Runs the compiled main.exe."
+    }
+  ]
+}

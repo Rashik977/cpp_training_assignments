@@ -6,7 +6,7 @@
       "type": "shell",
       "command": "g++",
       "args": [
-        "week1/*.cpp", // Compile all C++ files in the folder
+        "week1/call_operator.cpp", // Compile all C++ files in the folder
         "-o", // Output flag
         "week1/main.exe" // Name of the output executable
       ],

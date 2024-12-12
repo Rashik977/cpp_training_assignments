@@ -1,29 +1,33 @@
 #include <iostream>
+#include <string>
 
-// Define the class
-class CallOperator {
+class Greeting
+{
 private:
-    int a, b;  // Data members to hold values
+    std::string name;
+    int times;
 
 public:
-    // Constructor with parameters identical to the call operator
-    CallOperator(int x, int y) : a(x), b(y) {
-        std::cout << "Constructor called with values a = " << a << " and b = " << b << std::endl;
-    }
+    Greeting(const std::string &name, int times) : name(name), times(times) {}
 
-    // Overload the call operator
-    void operator()() {
-        std::cout << "Call operator invoked!" << std::endl;
-        std::cout << "a + b = " << a + b << std::endl;
+    // Overload call operator
+    void operator()() const
+    {
+        for (int i = 0; i < times; ++i)
+        {
+            std::cout << "Hello, " << name << "!" << std::endl;
+        }
     }
+    ~Greeting() {}
 };
 
-int main() {
-    // Create an object of CallOperator and invoke the constructor
-    CallOperator obj(10, 20);
+int main()
+{
 
-    // Use the call operator by treating the object as a function
-    obj();  // Calls operator()
+    Greeting greet("Rashik", 3);
+
+    // Invoking the call operator
+    greet();
 
     return 0;
 }

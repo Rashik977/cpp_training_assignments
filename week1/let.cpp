@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <string.h>
+#include <memory>
 
 enum class LetType
 {
@@ -117,6 +118,10 @@ int main()
 
     a += 5;
     d += 5.5;
+
+    std::shared_ptr<Let> p = std::make_shared<Let>("world");
+    auto p2 = p;
+    
 
     std::cout << s << std::endl;
     std::cout << d << std::endl;

@@ -9,7 +9,7 @@
           "command": "/usr/bin/g++",
           "args": [
               "-g",
-              "week1/call_operator.cpp",
+              "week1/VariantList.cpp",
               "-o",
               "week1/main"
           ],

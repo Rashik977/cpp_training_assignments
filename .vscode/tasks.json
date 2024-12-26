@@ -9,9 +9,9 @@
           "command": "/usr/bin/g++",
           "args": [
               "-g",
-              "week1/VariantList.cpp",
+              "Day11/*.cpp",
               "-o",
-              "week1/main"
+              "Day11/main"
           ],
           "group": {
               "kind": "build",
